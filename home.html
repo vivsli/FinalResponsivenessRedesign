@@ -3,114 +3,155 @@
 <html>
 
 <head>
-  <title>😊</title>
+  <title>Redesigning Hardvard</title>
   <link rel="stylesheet" href="index.css">
   <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 
-<body class="flex-column">
-  <h1>Redesigning Harvard</h1>
-  <h2 class="words"> As a part of my UI/UX class, I redesigned the course website for
-    one of Harvard University's computer science courses (http://madhu.seas.harvard.edu/courses/Fall2020/). Here are the
-    steps
-    I took to accomplish this:
-  </h2>
-  <div class="boxed">
-    <ol>
-      <li>I indentified usability problems</li>
-      <li>I created a low-fidelity wireframe based on the usability problems identified</li>
-      <li>I designed a high-fidelity prototype inspired by the course website of my own CS course at Brown.</li>
-      <li>I made a visual design guide to explain my design decisions</li>
-      <li>I actualized my high-fidelity prototype into an HTML/CSS website</li>
-    </ol>
+<body>
+  <div class="flex-column">
+    <h1>Redesigning Harvard</h1>
+    <h2 class="words"> For an assignment in my UI/UX class, I redesigned the course website for
+      one of Harvard University's computer science courses to practice the workflow of redesigning a simple website.
+    </h2>
+    <a class="green" href="http://madhu.seas.harvard.edu/courses/Fall2020/" target="_blank"
+      rel="noopener noreferrer">Click here for the
+      (questionable) original version!</a>
+    <div class="pbox spacing">
+      <h2> Here are the steps I took to accomplish this:</h2>
+      <ol class="white">
+        <li><a href="#step1" class="words">I indentified usability and accessibility problems</a></li>
+        <li><a href="#step2" class="words">I created a low-fidelity wireframe based on the usability and accessibility
+            problems
+            identified</a></li>
+        <li><a href="#step3" class="words">I designed a high-fidelity prototype inspired by the course website of my own
+            CS course at
+            Brown.</a></li>
+        <li><a href="#step4" class="words">I created a visual design guide to explain my design decisions</a></li>
+        <li><a href="#step5" class="words">I actualized my high-fidelity prototype into an HTML/CSS website</a></li>
+      </ol>
+    </div>
   </div>
 
-  <hr>
-
-  <div class="flex-column">
+  <div class="flex-column" id="step1">
     <h1>Finding Usability Problems</h1>
-    <img src="images/cs121 screenshot.png" class="image boxed">
+    <h2 class="words"> I first found usability problems through observation, <br>and then identified accesibility
+      problems
+      via WebAIM WAVE and a screen-reader :
+    </h2>
+    <img src="images/cs121 screenshot.png" class="biggerImage pbox spacing">
 
-    <div class="boxed">
+    <div class="pbox spacing">
       <h2>What I see as usability issues:</h2>
-      <ul>
+      <ul class="words">
         <li>Difficult to make out a text hierarchy because the differences between text sizes are too small</li>
-        <li>Not really sure what the different colors stand for, specifically the dark and light blue</li>
-        <li>A lot of information that isn't sectioned enough, makes it difficult to find specific information</li>
+        <li>Not really sure what the different colors stand for, particularly the dark and light blue</li>
+        <li>There's a lot of information that isn't sectioned enough which makes it difficult to find specific
+          information</li>
         <li>Could use some pictures to make it more visually appealing</li>
         <li>Not super clear what is interactive (clickable) and what isn't</li>
         <li>In the mobile and tablet versions, there are no margins or padding so the text just extends all the way to
-          the edges of the screen and are difficult to read</li>
+          the edges of the screen, making it difficult to read</li>
       </ul>
     </div>
 
-    <div class="boxed">
+    <div class="pbox spacing">
       <h2>What WebAIM WAVE sees as usability issues:</h2>
-      <ul>
+      <ul class="words">
         <li>No language assigned</li>
         <li>28 contrast errors</li>
         <li>The structure is composed of 1 header and 8 unordered lists</li>
       </ul>
     </div>
 
-    <div class="boxed">
-      <h2>What the screen reader sees that can be interpreted as usability issues:</h2>
-      <ul>
-        <li>There are so many links that it reads out which is really uneccessary and breaks the flow of information
+    <div class="pbox spacing">
+      <h2>What the screen reader sees that can be <br>interpreted as accessibility issues:</h2>
+      <ul class="words">
+        <li>There are many links on the page; for each one, the screen-reader spells out the whole link, <br> <br>which
+          is really
+          uneccessary
+          and breaks the flow of information
         </li>
       </ul>
     </div>
+  </div>
 
+  <div id="step2" class="flex-column">
     <h1>Lo-Fi Wireframes</h1>
-    <h2 class="words">Here are the annotated wireframes I made in Balsamiq using the data I gathered above:</h2>
-    <h4>Note* Unless explicitedly stated otherwise, all annotations made in my desktop
-      wireframe carry over to my tablet and mobile wireframes as well</h4>
-    <h3>Desktop</h3>
-    <div class="flex-column">
-      <img src="images/Annotated_Desktop_Wireframe.jpg"class="annotate">
-    </div>
-    <h3>Tablet</h3>
-    <div class="flex-column">
-      <img src="images/Annotated_Tablet_Wireframe.jpg"class="annotate smaller">
-    </div>
-    <h3>Mobile</h3>
-    <div class="flex-column">
-      <img src="images/Mobile_Annotated_Wireframe.jpg"class="annotate">
+    <div class="flex-column spacing">
+      <h2 class="words">Here are the annotated wireframes I made in Balsamiq using the data I gathered above:</h2>
+      <h4 class="words">Note* Unless explicitedly stated otherwise, all annotations noted in my desktop <br>
+        wireframe carry over to my tablet and mobile wireframes as well</h4>
     </div>
 
+    <div class="flex-row to-top">
+      <div class="flex-column">
+        <h3>Desktop</h3>
+        <img src="images/Annotated_Desktop_Wireframe.jpg" class="pbox">
+      </div>
 
+      <div class="flex-column">
+        <h3>Tablet</h3>
+        <img src="images/Annotated_Tablet_Wireframe.jpg" class="pbox">
+      </div>
+
+      <div class="flex-column">
+        <h3>Mobile</h3>
+        <img src="images/Mobile_Annotated_Wireframe.jpg" class="pbox">
+      </div>
+    </div>
+  </div>
+
+  <div id="step3" class="flex-column">
     <h1>Hi-Fi Wireframes</h1>
-    <div class="flex-column boxed">
-      <h2 class="words">Here are the annotated prototypes I made in Adobe XD using my wireframes as a rough outline
-        and inspired by the CSCI1300 website at Brown University. Note the many structural changes that were made in
-        response to
-        the information that was actually available on the original website</h2>
-    </div>
-    <h3>Desktop</h3>
-    <div class="flex-column">
-      <img src="images/Desktop_Annotated_Prototype.jpg" class="annotate smaller">
-    </div>
-    <h3>Tablet</h3>
-    <div class="flex-column">
-      <img src="images/Tablet_Annotated_Prototype.jpg"class="annotate smaller">
-    </div>
-    <h3>Mobile</h3>
-    <div class="flex-column">
-      <img src="images/Mobile_Annotated_Prototype.jpg"class="annotate">
+    <div class="flex-column spacing">
+      <h2 class="words">Here are the annotated prototypes I made in Adobe XD using my wireframes <br>as a rough outline.
+        I was inspired by the CSCI1300 (the course for which this project was made :) website at Brown University.
+      </h2>
+      <a href="https://cs.brown.edu/courses/csci1300/">
+        <h3>To view the CSCI1300 website, click here!</h3>
+      </a>
     </div>
 
+    <div class="flex-row to-top">
+      <div class="flex-column">
+        <h3>Desktop</h3>
+        <img src="images/Desktop_Annotated_Prototype.jpg" class="pbox">
+      </div>
+
+      <div class="flex-column">
+        <h3>Tablet</h3>
+        <img src="images/Tablet_Annotated_Prototype.jpg" class="pbox">
+      </div>
+
+      <div class="flex-column">
+        <h3>Mobile</h3>
+        <img src="images/Mobile_Annotated_Prototype.jpg" class="pbox">
+      </div>
+    </div>
+  </div>
+
+  <div id="step4" class="flex-column">
     <h1>Visual Design Guide</h1>
     <h2 class="words">Here is the visual design guide that displays the overarching design patterns I utilized</h2>
     <div class="flex-column">
-      <img src="images/Visual Design Guide.png" class="annotate smaller">
+      <img src="images/Visual Design Guide.png" class="pbox">
     </div>
-    <h1>Responsive Redesign</h1>
-    <h2 class="words"> Anddddd Here's the final product: the original website completely redesigned!</h2>
-    <a href="https://pure-citadel-94188.herokuapp.com/">HARVARD REDESIGNED</a>
-
-
   </div>
+
+  <div id="step5" class="flex-column">
+    <h1>Responsiveness Redesign</h1>
+    <h2 class="words"> Anddddd Here's the final product: the original website completely redesigned!</h2>
+    <a class="green" href="https://pure-citadel-94188.herokuapp.com/" target="_blank" rel="noopener noreferrer"> See
+      HARVARD
+      REDESIGNED</a>
+    <h3 class=" pbox"> SKILLS ACQUIRED: In this project, I learned how to analyze and identify flaws in an existing
+      interface, create low-fidelity and high-fidelity prototypes for various screen sizes, and build a responsive
+      website based on those prototypes.</h3>
+  </div>
+
+
 </body>
 
 </html>
